@@ -1,0 +1,21 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+// layouts/main.pug
+.body__main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+// includes/footer.pug
+.footer__bottom {
+  margin-top: auto;
+}
+
+// home.pug
+.column__img {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
