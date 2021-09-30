@@ -1,0 +1,16 @@
+extends layouts/main.pug
+
+mixin column_img(name)
+  .column.column__img.is-flex.is-align-items-center.is-justify-content-center
+    img(src="/img/" + name + ".png" alt=name)
+
+block content
+  .column.is-half.is-offset-one-quarter.mb-5
+    .notification.is-primary.is-light.has-text-centered
+      | #{message}
+    
+  .columns
+    +column_img("typescript")
+    +column_img("express")
+    +column_img("pug")
+    +column_img("sass")

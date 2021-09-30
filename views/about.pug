@@ -1,0 +1,19 @@
+extends layouts/main.pug
+
+block content
+  .column.is-three-fifths.is-offset-one-fifth
+    .box.has-background-grey.has-text-white-ter
+      article.media
+        .media-left
+          figure.image.is-128x128
+            img(src="https://avatars.githubusercontent.com/u/61509318" alt="Github avatar")
+        .media-content
+          .content
+            p
+              strong#author-name.has-text-white-ter Author name
+              |  
+              small#author-email.has-text-grey-lighter author.email@gmail.com
+            p.has-text-justified#author-introduction.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam laudantium ab neque corrupti ullam dolores eos deserunt earum libero labore possimus consequatur modi nemo harum reprehenderit, sint deleniti corporis? Consequuntur?
+
+  script(src="/js/main.js")
