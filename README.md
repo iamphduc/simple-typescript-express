@@ -26,8 +26,8 @@ As a TypeScript beginner, I looked for an example project until I found this [Ty
 - sass
 - shelljs
 - concurrently
-
-In my opinion, `sass` is a *must-have*. If we don't use `sass`, we'll need `shelljs` to copy /css from **src** to **dist** like /img.
+ 
+In my opinion, `sass` is a *should-have*. Without `sass`, we'll need `shelljs` to copy /css from **src** to **dist** like /img.
 
 ## Project structure
 These are *must-know* files/directories.
