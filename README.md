@@ -42,23 +42,23 @@ These are *must-know* files/directories.
 
 ## Npm scripts
 
-| Npm                       | Description                                                                               |
-| ------------------------- | ----------------------------------------------------------------------------------------- |
-| `start`                   | Runs `node dist/app.js`                                                                   |
-| `dev`                     | Runs all watch tasks (TypeScript, Sass, Node) for development, exclude `copy-assets`      |
-| `watch-ts`                | Same as `build-ts` but continuously watches `.ts` files and re-compiles when needed       |
-| `watch-sass`              | Same as `build-sass` but continuously watches `.scss` files and re-compiles when needed   |
-| `watch-node`              | Runs `nodemon dist/app.js`                                                                |
-| `build`                   | Full build. Runs ALL build tasks (`build-ts`, `build-sass`, `copy-assets`)                |
-| `build-ts`                | Compiles all **src** `.ts` files to `.js` files in the **dist** directory                 |
-| `build-sass`              | Compiles all `.scss` files to `.css` files                                                |
-| `copy-assets`             | Calls Shelljs script that copies /img to the **dist** directory                           |
+| Npm                      | Description                                                                               |
+| ------------------------ | ----------------------------------------------------------------------------------------- |
+| `start`                  | Runs `node dist/app.js`                                                                   |
+| `dev`                    | Runs all watch tasks (TypeScript, Sass, Node) for development, exclude `copy-assets`      |
+| `watch-ts`               | Same as `build-ts` but continuously watches `.ts` files and re-compiles when needed       |
+| `watch-sass`             | Same as `build-sass` but continuously watches `.scss` files and re-compiles when needed   |
+| `watch-node`             | Runs `nodemon dist/app.js`                                                                |
+| `build`                  | Full build. Runs ALL build tasks (`build-ts`, `build-sass`, `copy-assets`)                |
+| `build-ts`               | Compiles all **src** `.ts` files to `.js` files in the **dist** directory                 |
+| `build-sass`             | Compiles all `.scss` files to `.css` files                                                |
+| `copy-assets`            | Calls Shelljs script that copies /img to the **dist** directory                           |
 
 ## Project map
 ```
-├── dist                              <----- Built .js code after "npm run build". This is the code you ship
+├── dist                          <----- Built .js code after "npm run build". This is the code you ship
 ├── node_modules
-├── src                               <----- Raw .ts code that will be compiled to .js in dist 
+├── src                           <----- Raw .ts code that will be compiled to .js in dist 
 │   ├── configs
 │   │   └── viewEngine.ts
 │   ├── controllers
@@ -79,7 +79,7 @@ These are *must-know* files/directories.
 │   |   ├── homeRouter.ts
 │   |   └── index.routes.ts
 |   └── app.ts
-├── views                             <----- Views should be outside for both src and dist code using
+├── views                         <----- Views should be outside for both src and dist code using
 |   ├── includes
 |   |   ├── footer.pug
 |   |   └── header.pug
@@ -89,8 +89,8 @@ These are *must-know* files/directories.
 |   └── home.pug
 ├── .env
 ├── .gitignore
-├── copyAssets.ts                     <----- Shelljs script that copies src/public/img -> dist/public/img
+├── copyAssets.ts                 <----- Shelljs script that copies src/public/img -> dist/public/img
 ├── package-lock.json
 ├── package.json
-└── tsconfig.js                       <----- TypeScript config for compiling
+└── tsconfig.js                   <----- TypeScript config for compiling
 ```
