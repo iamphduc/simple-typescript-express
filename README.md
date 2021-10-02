@@ -4,7 +4,7 @@ This project is a simple version of [TypeScript-Node-Starter](https://github.com
 There is no Database (Mongoose) and Testing, which makes it light and simple.
 
 ## Getting started
-Check out [Project map](#project-map) to have an entire repository view.
+Check out [Project structure](#project-structure) to have an entire repository view.
 
 - To build and run the project
 ```
@@ -29,17 +29,6 @@ As a TypeScript beginner, I looked for an example project until I found this [Ty
  
 In my opinion, `sass` is a *should-have*. Without `sass`, we'll need `shelljs` to copy /css from **src** to **dist** like /img.
 
-## Project structure
-These are *must-know* files/directories.
-
-| Name                     | Description                                                     |
-| ------------------------ | --------------------------------------------------------------- |
-| **dist**                 | Built .js code after "npm run build". This is the code you ship |
-| **src**                  | Raw .ts code that will be compiled to .js in dist               |
-| **views**                | Views should be outside for both src and dist code using        |
-| copyAssets.ts            | Shelljs script that copies src/public/img -> dist/public/img    |
-| tsconfig.json            | TypeScript config for compiling                                 |
-
 ## Npm scripts
 
 | Npm                      | Description                                                                               |
@@ -54,7 +43,7 @@ These are *must-know* files/directories.
 | `build-sass`             | Compiles all `.scss` files to `.css` files                                                |
 | `copy-assets`            | Calls Shelljs script that copies /img to the **dist** directory                           |
 
-## Project map
+## Project structure
 ```
 ├── dist                          <----- Built .js code after "npm run build". This is the code you ship
 ├── node_modules
@@ -79,7 +68,7 @@ These are *must-know* files/directories.
 │   |   ├── homeRouter.ts
 │   |   └── index.routes.ts
 |   └── app.ts
-├── views                         <----- Views should be outside for both src and dist code using
+├── views                         <----- Views should be outside for both src code and dist code using
 |   ├── includes
 |   |   ├── footer.pug
 |   |   └── header.pug
@@ -89,7 +78,7 @@ These are *must-know* files/directories.
 |   └── home.pug
 ├── .env
 ├── .gitignore
-├── copyAssets.ts                 <----- Shelljs script that copies src/public/img -> dist/public/img
+├── copyAssets.ts                 <----- Shelljs script that copies src/public/img to dist directory
 ├── package-lock.json
 ├── package.json
 └── tsconfig.js                   <----- TypeScript config for compiling
