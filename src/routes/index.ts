@@ -1,8 +1,8 @@
 import { Application } from "express";
 
 // Import routers
-import homeRouter from "./homeRouter";
-import apiRouter from "./apiRouter";
+import homeRouter from "./home.routes";
+import apiRouter from "./api.routes";
 
 const route = (app: Application): void => {
   app.use("/", homeRouter);

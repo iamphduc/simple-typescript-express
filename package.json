@@ -12,7 +12,7 @@
     "build": "npm run build-scss && npm run build-ts && npm run copy-assets",
     "build-ts": "tsc",
     "build-scss": "sass src/public/scss/main.scss dist/public/css/main.css",
-    "copy-assets": "ts-node copyAssets.ts"
+    "copy-assets": "ts-node copy-assets.ts"
   },
   "keywords": [
     "typescript",

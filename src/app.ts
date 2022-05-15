@@ -1,7 +1,7 @@
 import express, { Application } from "express";
 
-import setViewEngine from "./configs/viewEngine";
-import route from "./routes/index.routes";
+import setViewEngine from "./configs/view-engine";
+import route from "./routes";
 
 // Create Express server
 const app: Application = express();
