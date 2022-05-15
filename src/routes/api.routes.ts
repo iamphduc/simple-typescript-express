@@ -1,9 +1,11 @@
 import express from "express";
 
+import { ApiService } from "../services/api.service";
 import { ApiController } from "../controllers/api.controller";
 
 const apiRouter = express.Router();
-const apiController = new ApiController();
+const apiService = new ApiService();
+const apiController = new ApiController(apiService);
 
 apiRouter //
   .route("/authors")
