@@ -1,17 +1,17 @@
 {
   "name": "simple-typescript-express",
   "version": "1.0.0",
-  "description": "A simple express project using typescript",
+  "description": "TypeScript - Express boilerplate for beginners",
   "main": "dist/app.js",
   "scripts": {
     "start": "node dist/app.js",
     "dev": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run watch-node\"",
     "watch-ts": "tsc --watch",
-    "watch-sass": "sass --watch src/public/scss/main.scss dist/public/css/main.css",
+    "watch-sass": "sass --watch src/public/scss:dist/public/css",
     "watch-node": "nodemon dist/app.js",
     "build": "npm run build-scss && npm run build-ts && npm run copy-assets",
     "build-ts": "tsc",
-    "build-scss": "sass src/public/scss/main.scss dist/public/css/main.css",
+    "build-scss": "sass src/public/scss:dist/public/css",
     "copy-assets": "ts-node copy-assets.ts"
   },
   "keywords": [
