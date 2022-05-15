@@ -1,21 +1,17 @@
-import express, { Application } from "express";
+import express from "express";
 
-import setViewEngine from "./configs/view-engine";
-import route from "./routes";
+import { setViewEngine } from "./configs/view-engine";
+import { setRoutes } from "./routes";
 
-// Create Express server
-const app: Application = express();
 const PORT = process.env.PORT || 5000;
 
-// Static public directory
+const app = express();
+
 app.use(express.static(__dirname + "/public"));
 
-// App view engine
 setViewEngine(app);
-
-// App routes
-route(app);
+setRoutes(app);
 
 app.listen(PORT, () => {
-  console.log(`App listening: http://localhost:${PORT}`);
+  console.log(`App running at: http://localhost:${PORT}`);
 });

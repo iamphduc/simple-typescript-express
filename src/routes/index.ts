@@ -1,12 +1,9 @@
 import { Application } from "express";
 
-// Import routers
-import homeRouter from "./home.routes";
-import apiRouter from "./api.routes";
+import { homeRouter } from "./home.routes";
+import { apiRouter } from "./api.routes";
 
-const route = (app: Application): void => {
+export const setRoutes = (app: Application): void => {
   app.use("/", homeRouter);
   app.use("/api", apiRouter);
 };
-
-export default route;

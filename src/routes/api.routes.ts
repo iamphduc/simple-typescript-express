@@ -1,9 +1,12 @@
-import express, { Router } from "express";
+import express from "express";
 
-// Import all APIController functions
-import * as apiController from "../controllers/api.controller";
+import { ApiController } from "../controllers/api.controller";
 
-// Create Express API router
-const apiRouter: Router = express.Router();
+const apiRouter = express.Router();
+const apiController = new ApiController();
 
-export default apiRouter.get("/authors", apiController.getAuthorInfo);
+apiRouter //
+  .route("/authors")
+  .get(apiController.getAuthorInfo);
+
+export { apiRouter };
